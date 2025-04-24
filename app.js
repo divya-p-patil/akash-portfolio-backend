@@ -1,5 +1,4 @@
 const express = require("express");
-const { RecruiterModel } = require("./models/recruiter.model");
 const cors = require("cors");
 const { connectToDatabase } = require("./db");
 const { recruiterRouter } = require("./routes/recruiter.routes");

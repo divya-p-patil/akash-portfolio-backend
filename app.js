@@ -12,6 +12,10 @@ app.use(cors());
 // Routes
 app.use("/recruiter", recruiterRouter);
 
+app.use("/", (req, res) => {
+  res.send("Home page");
+});
+
 app.listen(process.env.PORT, async () => {
   try {
     await connectToDatabase();

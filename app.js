@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const { connectToDatabase } = require("./db");
 const { recruiterRouter } = require("./routes/recruiter.routes");
+const {  connectionToDatabase } = require("./db");
 const app = express();
 require("dotenv").config();
 
@@ -17,8 +17,9 @@ app.use("/", (req, res) => {
 
 app.listen(process.env.PORT, async () => {
   try {
-    await connectToDatabase();
-    console.log("server is running");
+    await connectionToDatabase;
+
+    console.log("server is running & sucessful connection to databse");
   } catch (error) {
     console.log("error ");
   }
